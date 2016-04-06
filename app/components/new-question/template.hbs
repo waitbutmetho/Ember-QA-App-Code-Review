@@ -7,9 +7,9 @@
       {{input value=author}}
       <label for="notes">Notes</label>
       {{input value=notes}}
-      <button {{action 'saveNewQuestion'}}>Ask for answers!</button>
+      <button class="btn btn-default" {{action 'saveNewQuestion'}}>Save Question</button>
     </form>
   {{else}}
-    <button {{action 'showForm'}}>Ask your own question!</button>
+    <button class="btn btn-default" {{action 'showForm'}}>Ask Question</button>
   {{/if}}
 </div>

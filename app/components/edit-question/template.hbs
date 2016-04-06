@@ -6,7 +6,7 @@
     {{input value=model.author}}
     <label for="notes">Notes</label>
     {{input value=model.notes}}
-    <button {{action 'saveEditQuestion' model}}>Save</button>
+    <button  class="btn btn-default" {{action 'saveEditQuestion' model}}>Save</button>
   </form>
 {{else}}
   <div>
@@ -14,6 +14,6 @@
     <p>Question: {{model.content}}</p>
     <p>Notes: {{model.notes}}</p>
   </div>
-  <button {{action 'showForm'}}>Edit Question</button>
+  <button  class="btn btn-default" {{action 'showForm'}}>Edit Question</button>
 {{/if}}
 {{answer-list model=model.answers}}
