@@ -1,0 +1,15 @@
+<div class="new-question">
+  {{#if formVisible}}
+    <form class="newQuestionForm">
+      <label for="content">Question</label>
+      {{input value=content}}
+      <label for="author">Name</label>
+      {{input value=author}}
+      <label for="notes">Notes</label>
+      {{input value=notes}}
+      <button {{action 'saveNewQuestion'}}>Ask for answers!</button>
+    </form>
+  {{else}}
+    <button {{action 'showForm'}}>Ask your own question!</button>
+  {{/if}}
+</div>
