@@ -1,5 +1,5 @@
 {{#if formVisible}}
-  <form class="editQuestionForm">
+  <form>
     <label for="content">Question</label>
     {{input value=model.content}}
     <label for="author">Author</label>
@@ -10,9 +10,10 @@
   </form>
 {{else}}
   <div>
-    <p>Author {{model.author}}</p>
-    <p>Question{{model.content}}</p>
-    <p>Notes:{{model.notes}}</p>
+    <p>Author: {{model.author}}</p>
+    <p>Question: {{model.content}}</p>
+    <p>Notes: {{model.notes}}</p>
   </div>
   <button {{action 'showForm'}}>Edit Question</button>
 {{/if}}
+{{answer-list model=model.answers}}
