@@ -1,5 +1,4 @@
-{{yield}}
-
-<p>
-  {{question.author}}
-</p>
+{{#link-to 'question' question.id}}
+<h2>{{question.content}} </h2>
+  <span>-{{question.author}}</span>
+{{/link-to}}
