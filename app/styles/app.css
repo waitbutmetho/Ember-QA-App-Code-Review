@@ -4,5 +4,8 @@
 }
 
 .jumbotron {
-  background-color: white;
+  background-image: url('/img/white-brick.png');;
+}
+body {
+  background-image: url('/img/white-brick.png');;
 }
