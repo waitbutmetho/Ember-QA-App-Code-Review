@@ -4,6 +4,9 @@ export default Ember.Route.extend({
   model(params) {
   return this.store.findRecord('question', params.question_id);
 },
+
+  favorite: Ember.inject.service(),
+
 actions: {
   resaveQuestion(question) {
     question.save();
@@ -15,6 +18,9 @@ actions: {
       newAnswer.save().then(function() {
         return question.save();
       });
-    }
+    },
+    addToFavorites(favorite) {
+      this.get('favorite').add(favorite);
+    },
   }
 });
